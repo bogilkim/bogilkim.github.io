@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bogil Kim</title>
+    <style>
+        /* --- Global Reset & Typography --- */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --accent-color: #0055aa; /* 차분한 블루 (연세 블루 톤) */
+            --secondary-text: #222222;
+            --third-text: #666666;
+            --border-color: #eaeaea;
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: var(--text-color);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+            border-bottom-color: var(--accent-color);
+        }
+
+        /* --- Layout --- */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        /* --- Header / Bio --- */
+        header {
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            color: var(--secondary-text);
+            border-bottom: 2.5px solid var(--border-color);
+            /* margin-bottom: 8rem; */
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            font-size: 0.9rem;
+        }
+
+        .social-links a {
+            border-bottom: none;
+            color: var(--third-text);
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* --- Headings for Sections --- */
+        h2 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--secondary-text);
+            border-bottom: 2.5px solid var(--border-color);
+            padding-bottom: 3px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        /* --- List Styles (Education, etc.) --- */
+        .info-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-list li {
+            margin-bottom: 1rem;
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 20px;
+        }
+        .medium-category {
+            color: var(--first-text);
+            font-variant-numeric: tabular-nums;
+            font-size: 0.9rem;
+        }
+        .date {
+            color: var(--secondary-text);
+            font-variant-numeric: tabular-nums;
+            font-size: 0.9rem;
+        }
+
+        /* --- Publications --- */
+        .pub-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pub-list li {
+            margin-bottom: 1.5rem;
+        }
+
+        .pub-title {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .pub-authors {
+            color: var(--secondary-text);
+            font-size: 0.95rem;
+        }
+
+        .pub-venue {
+            font-style: italic;
+            color: var(--accent-color);
+            font-size: 0.95rem;
+        }
+
+        /* --- Mobile Tweaks --- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+
+            .info-list li {
+                grid-template-columns: 1fr; /* Stack vertically on mobile */
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1>Bogil Kim</h1>
+            <div class="subtitle">
+                Staff Engineer<br>
+                AI System Team<br>
+                Samsung Research, Samsung Electronics
+            </div>
+        </header>
+<!--             
+            <p>
+                I am a Ph.D. candidate at Yonsei University, advised by Prof. William J. Song. 
+                My research interests lie in <strong>computer systems and architecture</strong>, with a focus on heterogeneous computing, mobile computing, and neural network accelerators.
+            </p> -->
+        <section>
+            <h2>Contact</h2>
+            <div class="social-links">
+                <a href="mailto:bogil93.kim@gmail.com">Email</a>
+                <a href="https://github.com/bogilkim" target="_blank">GitHub</a>
+                <a href="https://scholar.google.com/citations?user=_snuiQEAAAAJ&hl=ko" target="_blank">Google Scholar</a>
+                <a href="https://www.linkedin.com/in/bogil-kim-23a1151b9/" target="_blank">LinkedIn</a>
+                <!-- <a href="YOUR_CV_LINK.pdf" target="_blank">CV (PDF)</a> -->
+            </div>
+        </section>
+
+        <!-- Research Interest section -->
+        <section>
+            <h2>Research Interest</h2>
+            <ul class="info-list">
+                <li>
+                    <span class="medium-category"><strong>Computer Architecture</strong></span>
+                    <div>
+                        Neural Network Accelerator, Processing In/Near Memory, Heterogeneous Computing, Mobile Computing<br>
+                        Workload Characterization, Simulation, Power and Energy Management
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Education</h2>
+            <ul class="info-list">
+                <li>
+                    <span class="date">Sept. 2018 - Feb. 2025</span>
+                    <div>
+                        <strong>Ph.D. in Electrical and Electronic Engineering</strong><br>
+                        Yonsei University, Seoul, South Korea<br>
+                    </div>
+                </li>
+                <li>
+                    <span class="date">Mar. 2014 - Aug. 2018</span>
+                    <div>
+                        <strong>B.S. in Electrical and Electronic Engineering</strong><br>
+                        Yonsei University, Seoul, South Korea
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Work Experiences</h2>
+        </section>
+
+        <section>
+            <h2>Selected Publications</h2>
+            <ul class="pub-list">
+                <li>
+                    <span class="pub-title">NeuroSpector: Systematic optimization of dataflow scheduling in DNN accelerators</span>
+                    <div class="pub-authors">C. Park*, <b>B. Kim*</b>, S. Ryu, W. J. Song</div>
+                    <div class="pub-venue">IEEE Transactions on Parallel and Distributed Systems (TPDS), 2023</div>
+                </li>
+
+                <li>
+                    <span class="pub-title">The Nebula benchmark suite: Implications of lightweight neural networks</span>
+                    <div class="pub-authors"><b>B. Kim</b>, S. Lee, C. Park, H. Kim, W. J. Song</div>
+                    <div class="pub-venue">IEEE Transactions on Computers (TC), 2020</div>
+                </li>
+
+                <li>
+                    <span class="pub-title">Duplo: Lifting redundant memory accesses of deep neural networks for GPU tensor cores</span>
+                    <div class="pub-authors">H. Kim, S. Ahn, Y. Oh, <b>B. Kim</b>, W. W. Ro, W. J. Song</div>
+                    <div class="pub-venue">MICRO, 2020</div>
+                </li>
+
+                <li>
+                    <span class="pub-title">Energy-efficient acceleration of deep neural networks on realtime-constrained embedded edge devices</span>
+                    <div class="pub-authors"><b>B. Kim</b>, S. Lee, A. R. Trivedi, W. J. Song</div>
+                    <div class="pub-venue">IEEE Access, 2020</div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- <section>
+            <h2>Research Experience</h2>
+            <ul class="info-list">
+                <li>
+                    <span class="date">Current</span>
+                    <div>
+                        <strong>Graduate Research Assistant</strong><br>
+                        CASL, Yonsei University
+                    </div>
+                </li>
+                </ul>
+        </section> -->
+
+        <footer style="margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--border-color); font-size: 0.8rem; color: var(--secondary-text);">
+            &copy; 2026 Bogil Kim. Hosted on GitHub Pages.
+        </footer>
+
+    </div>
+
+</body>
+</html>
